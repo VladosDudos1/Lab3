@@ -83,12 +83,15 @@ void task1() {
 		{
 			ofstream out;
 			out.open("out.txt");
-			if (firstChar != 0) {
-				out << "Первая по порядку запятая идёт под номером " << firstChar << " " << "Последняя по порядку запятая идёт под номером " + lastChar;
-			}
-			else
+			if (out.is_open())
 			{
-				out << "Запятых не обнаружено" << endl;
+				if (firstChar != 0) {
+					out << "Первая по порядку запятая идёт под номером " << firstChar << " " << "Последняя по порядку запятая идёт под номером " + lastChar;
+				}
+				else
+				{
+					out << "Запятых не обнаружено" << endl;
+				}
 			}
 			out.close();
 			return;
