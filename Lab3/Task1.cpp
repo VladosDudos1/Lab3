@@ -3,23 +3,24 @@
 
 using namespace std;
 
-int chekNumIsNum(int n) {
-	string test = "";
-	cin >> test;
-	try
-	{
-		n = stoi(test);
+int chekNumIsNum() {
+	while (true) {
+		string test;
+		getline(cin, test);
+		try {
+			size_t pos = 0;
+			int value = stoi(test, &pos);
+			if (pos == test.size()) {
+				return value;
+			}
+			else {
+				cout << "¬ведите число" << endl;
+			}
+		}
+		catch (const invalid_argument&) {
+			cout << "¬ведите число" << endl;
+		}
 	}
-	catch (exception e) {}
-	if (n>0) {
-		return n;
-	}
-	else
-	{
-		cout << "N не €вл€етс€ числом, повторите ввод!\n";
-		return chekNumIsNum(n);
-	}
-	
 }
 
 void task1() {
@@ -27,7 +28,7 @@ void task1() {
 	int firstChar = 0;
 	int lastChar = 0;
 	cout << "¬ведите число N\n";
-	n = chekNumIsNum(n);
+	n = chekNumIsNum();
 
 	for (int i = 0; i < n; i++) {
 		char t = ' ';

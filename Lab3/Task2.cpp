@@ -4,20 +4,22 @@
 using namespace std;
 
 int chekNumIsNumTask2(int n) {
-	string test = "";
-	cin >> test;
-	try
-	{
-		n = stoi(test);
-	}
-	catch (exception e) {}
-	if (n > 0) {
-		return n;
-	}
-	else
-	{
-		cout << "N не €вл€етс€ числом, повторите ввод!\n";
-		return chekNumIsNumTask2(n);
+	while (true) {
+		string test;
+		getline(cin, test);
+		try {
+			size_t pos = 0;
+			int value = stoi(test, &pos);
+			if (pos == test.size()) {
+				return value;
+			}
+			else {
+				cout << "¬ведите число" << endl;
+			}
+		}
+		catch (const invalid_argument&) {
+			cout << "¬ведите число" << endl;
+		}
 	}
 
 }

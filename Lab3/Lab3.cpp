@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include "TitleFile.h"
+#include <limits>
+#include <string>
 
 using namespace std;
 
@@ -7,23 +9,24 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     cout << "Введите номер задания от 1 до 3\n";
-    int n = 0;
-    cin >> n;
+    string n = "";
+    getline(cin, n);
 
-    switch (n)
+    if (n == "1")
     {
-        case 1:
-            task1();
-            break;
-        case 2:
-            task2();
-            break;
-        case 3:
-            task3();
-            break;
-        default:
-            main();
-            break;
+        task1();
+    }
+    else if (n == "2")
+    {
+        task2();
+    }
+    else if (n == "3")
+    {
+        task3();
+    }
+    else
+    {
+        main();
     }
 }
 
