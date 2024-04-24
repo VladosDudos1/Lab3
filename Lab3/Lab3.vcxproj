@@ -130,10 +130,13 @@
     <ClCompile Include="Lab3.cpp" />
     <ClCompile Include="Task1.cpp" />
     <ClCompile Include="Task2.cpp" />
-    <ClCompile Include="Task3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TitleFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="in.txt" />
+    <Text Include="out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
