@@ -10,7 +10,7 @@ int chekNumIsNumTask2(int n) {
 		try {
 			size_t pos = 0;
 			int value = stoi(test, &pos);
-			if (pos == test.size()) {
+			if (pos == test.size() && value > 0) {
 				return value;
 			}
 			else {

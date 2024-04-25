@@ -10,7 +10,7 @@ int chekNumIsNum() {
 		try {
 			size_t pos = 0;
 			int value = stoi(test, &pos);
-			if (pos == test.size()) {
+			if (pos == test.size() && value > 0) {
 				return value;
 			}
 			else {
@@ -24,7 +24,7 @@ int chekNumIsNum() {
 }
 
 void task1() {
-	int n = 0;
+	unsigned int n = 0;
 	int firstChar = 0;
 	int lastChar = 0;
 	cout << "¬ведите число N\n";
