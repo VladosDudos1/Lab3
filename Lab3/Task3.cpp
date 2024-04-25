@@ -9,6 +9,8 @@ int chekNumIsNumTask3() {
 	while (true) {
         string test;
         getline(cin, test);
+        //test.replace('.', ',');
+        //cout << test << endl;
         try {
             double value = stod(test);
             if (value) {
